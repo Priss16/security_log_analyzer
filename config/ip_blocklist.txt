@@ -1,0 +1,5 @@
+# Sample Malicious IPs for testing
+103.45.67.89
+185.20.10.2
+5.188.10.1
+45.12.34.56

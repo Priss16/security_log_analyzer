@@ -1,0 +1,17 @@
+{
+    "name": "SentinelTrace AI Detection Layer",
+    "versions": {
+        "attack": "13",
+        "navigator": "4.8.2",
+        "layer": "4.4"
+    },
+    "domain": "enterprise-attack",
+    "description": "Auto-generated coverage layer from SentinelTrace AI scan.",
+    "techniques": [
+        {
+            "techniqueID": "T1110.001",
+            "color": "#e62222",
+            "comment": "SSH Brute Force"
+        }
+    ]
+}

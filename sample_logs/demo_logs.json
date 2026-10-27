@@ -1,0 +1,74 @@
+[
+    {
+        "timestamp": "2023-10-27T09:10:00Z",
+        "source": "Windows-Security",
+        "event_id": "4625",
+        "event_type": "Failed Login",
+        "username": "admin",
+        "source_ip": "192.168.1.105",
+        "message": "An account failed to log on."
+    },
+    {
+        "timestamp": "2023-10-27T09:10:05Z",
+        "source": "Windows-Security",
+        "event_id": "4625",
+        "event_type": "Failed Login",
+        "username": "admin",
+        "source_ip": "192.168.1.105",
+        "message": "An account failed to log on."
+    },
+    {
+        "timestamp": "2023-10-27T09:10:10Z",
+        "source": "Windows-Security",
+        "event_id": "4625",
+        "event_type": "Failed Login",
+        "username": "admin",
+        "source_ip": "192.168.1.105",
+        "message": "An account failed to log on."
+    },
+    {
+        "timestamp": "2023-10-27T09:10:15Z",
+        "source": "Windows-Security",
+        "event_id": "4625",
+        "event_type": "Failed Login",
+        "username": "admin",
+        "source_ip": "192.168.1.105",
+        "message": "An account failed to log on."
+    },
+    {
+        "timestamp": "2023-10-27T09:10:20Z",
+        "source": "Windows-Security",
+        "event_id": "4625",
+        "event_type": "Failed Login",
+        "username": "admin",
+        "source_ip": "192.168.1.105",
+        "message": "An account failed to log on."
+    },
+    {
+        "timestamp": "2023-10-27T09:10:25Z",
+        "source": "Windows-Security",
+        "event_id": "4625",
+        "event_type": "Failed Login",
+        "username": "admin",
+        "source_ip": "192.168.1.105",
+        "message": "An account failed to log on."
+    },
+    {
+        "timestamp": "2023-10-27T09:11:00Z",
+        "source": "Windows-Security",
+        "event_id": "4624",
+        "event_type": "Successful Login",
+        "username": "admin",
+        "source_ip": "192.168.1.105",
+        "message": "An account was successfully logged on."
+    },
+    {
+        "timestamp": "2023-10-27T09:12:00Z",
+        "source": "Sysmon",
+        "event_id": "1102",
+        "event_type": "Log Cleared",
+        "username": "admin",
+        "source_ip": "192.168.1.105",
+        "message": "The audit log was cleared."
+    }
+]

@@ -1,0 +1,70 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SentinelTrace AI - Security Report</title>
+        <style>
+            body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f4f9; color: #333; margin: 0; padding: 20px; }
+            h1, h2, h3 { color: #2c3e50; }
+            .container { max-width: 1000px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+            table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+            th, td { padding: 10px; border-bottom: 1px solid #ddd; text-align: left; }
+            th { background-color: #34495e; color: white; }
+            .critical { color: #e74c3c; font-weight: bold; }
+            .high { color: #e67e22; font-weight: bold; }
+            .medium { color: #f1c40f; font-weight: bold; }
+            .heatmap-container { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+            .heatmap-box { padding: 15px; border-radius: 5px; text-align: center; flex: 1 1 calc(25% - 10px); font-weight: bold; color: white; }
+            .heatmap-hit { background-color: #e74c3c; } /* Red for detected */
+            .heatmap-miss { background-color: #95a5a6; } /* Gray for clean */
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Security Log Analysis Report</h1>
+            <p><strong>Generated At:</strong> 2026-10-15T02:34:51.010710Z</p>
+            <p><strong>Total Alerts:</strong> 1</p>
+            
+            <h2>MITRE ATT&CK Tactic Heatmap</h2>
+            <div class='heatmap-container'><div class='heatmap-box heatmap-miss'>Reconnaissance</div><div class='heatmap-box heatmap-miss'>Initial Access</div><div class='heatmap-box heatmap-miss'>Execution</div><div class='heatmap-box heatmap-miss'>Persistence</div><div class='heatmap-box heatmap-miss'>Privilege Escalation</div><div class='heatmap-box heatmap-miss'>Defense Evasion</div><div class='heatmap-box heatmap-hit'>Credential Access</div><div class='heatmap-box heatmap-miss'>Discovery</div></div>
+            
+            <div style="display: flex; gap: 20px;">
+                <div style="flex: 1;">
+                    <h3>Top Attacker IPs</h3>
+                    <ul>
+                        <li>185.20.10.2 - 1 alerts</li>
+                    </ul>
+                </div>
+                <div style="flex: 1;">
+                    <h3>Top Triggered Rules</h3>
+                    <ul>
+                        <li>SSH Brute Force - 1 times</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>Alert Details</h2>
+            <table>
+                <tr>
+                    <th>Timestamp</th>
+                    <th>Severity</th>
+                    <th>Rule Title</th>
+                    <th>Source IP</th>
+                    <th>MITRE ID</th>
+                </tr>
+    
+                <tr>
+                    <td>2026-10-04T11:49:50Z</td>
+                    <td class="high">HIGH</td>
+                    <td>SSH Brute Force</td>
+                    <td>185.20.10.2</td>
+                    <td>T1110.001</td>
+                </tr>
+        
+            </table>
+        </div>
+    </body>
+    </html>
+    

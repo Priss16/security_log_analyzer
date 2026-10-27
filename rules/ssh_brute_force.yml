@@ -1,0 +1,26 @@
+# rules/ssh_brute_force.yml
+rule_id: "RULE-001"
+title: "SSH Brute Force"
+description: "Detects multiple failed SSH logins from a single IP address followed by a successful login or exceeding a threshold."
+author: "SentinelTrace"
+severity: "HIGH"
+mitre_attack:
+  tactic: "Credential Access"
+  technique: "T1110.001" # Password Guessing
+
+detection:
+  condition:
+    type: "threshold"
+    threshold: 5
+    timeframe: "5m" # 5 minutes
+    group_by: ["source_ip"]
+    filters:
+      - field: "event_type"
+        operator: "equals"
+        value: "Failed Login"
+
+response:
+  risk_score_base: 70
+  context_modifiers:
+    - condition: "successful_login_within_10m"
+      modifier: "+20"

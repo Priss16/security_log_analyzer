@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --color-soc-bg: #030712;
+  --color-soc-panel: rgba(17, 24, 39, 0.6);
+  --color-soc-border: rgba(55, 65, 81, 0.4);
+  --color-soc-text: #9ca3af;
+  --color-soc-heading: #f9fafb;
+  --color-soc-primary: #3b82f6;
+  --color-soc-primary-glow: rgba(59, 130, 246, 0.5);
+  --color-soc-success: #10b981;
+  --color-soc-warning: #f59e0b;
+  --color-soc-danger: #ef4444;
+}
+
+@layer base {
+  body {
+    @apply bg-soc-bg text-soc-text font-sans antialiased;
+    background: radial-gradient(circle at 50% 0%, #1e1b4b 0%, #030712 70%);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-soc-heading font-semibold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-soc-panel backdrop-blur-xl border border-soc-border shadow-2xl rounded-2xl;
+  }
+  .glow-text {
+    text-shadow: 0 0 20px var(--color-soc-primary-glow);
+  }
+  .premium-gradient {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(30, 58, 138, 0) 100%);
+  }
+  
+  /* Custom Scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(17, 24, 39, 0.5);
+    border-radius: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(59, 130, 246, 0.3);
+    border-radius: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(59, 130, 246, 0.6);
+  }
+}

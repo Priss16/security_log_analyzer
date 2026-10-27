@@ -1,0 +1,19 @@
+rule_id: "RULE-007"
+title: "Local Account Creation"
+description: "Detects new account creation (e.g., Windows Event ID 4720)."
+author: "SentinelTrace"
+severity: "MEDIUM"
+mitre_attack:
+  tactic: "Persistence"
+  technique: "T1136.001"
+detection:
+  condition:
+    type: "threshold"
+    threshold: 1
+    group_by: ["source"]
+    filters:
+      - field: "event_id"
+        operator: "equals"
+        value: "4720"
+response:
+  risk_score_base: 50

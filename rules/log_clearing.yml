@@ -1,0 +1,19 @@
+rule_id: "RULE-006"
+title: "Indicator Removal on Host (Log Clearing)"
+description: "Detects Windows Event ID 1102 (The audit log was cleared)."
+author: "SentinelTrace"
+severity: "CRITICAL"
+mitre_attack:
+  tactic: "Defense Evasion"
+  technique: "T1070.001"
+detection:
+  condition:
+    type: "threshold"
+    threshold: 1
+    group_by: ["source"]
+    filters:
+      - field: "event_id"
+        operator: "equals"
+        value: "1102"
+response:
+  risk_score_base: 90

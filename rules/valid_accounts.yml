@@ -1,0 +1,21 @@
+rule_id: "RULE-003"
+title: "Valid Accounts - Compromised"
+description: "Detects a successful login immediately following multiple failed attempts, indicating potential compromise."
+author: "SentinelTrace"
+severity: "CRITICAL"
+mitre_attack:
+  tactic: "Defense Evasion, Persistence, Privilege Escalation, Initial Access"
+  technique: "T1078"
+detection:
+  condition:
+    type: "sequence" # Not implemented natively in our simple engine yet, but we can simulate via thresholds if we tracked success. For now we use the basic parser flag.
+    # To keep it simple, we use threshold on the specific sequence alert if the parser provides it, or we enhance the engine.
+    # Let's assume we implement a basic sequence in the engine later. For now, we will just flag it if a parser detects it or use a threshold of 1 on a specific event_id.
+    threshold: 1
+    group_by: ["source_ip"]
+    filters:
+      - field: "event_id"
+        operator: "equals"
+        value: "COMPROMISED_ACCOUNT_DETECTED" # We will add logic for this in the correlator
+response:
+  risk_score_base: 95

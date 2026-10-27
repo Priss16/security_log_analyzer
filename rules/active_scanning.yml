@@ -1,0 +1,19 @@
+rule_id: "RULE-005"
+title: "Active Scanning"
+description: "Detects known web vulnerability scanners like Nikto, SQLmap, or Nmap."
+author: "SentinelTrace"
+severity: "MEDIUM"
+mitre_attack:
+  tactic: "Reconnaissance"
+  technique: "T1595"
+detection:
+  condition:
+    type: "threshold"
+    threshold: 1
+    group_by: ["source_ip"]
+    filters:
+      - field: "event_id"
+        operator: "equals"
+        value: "WEB_SCANNER"
+response:
+  risk_score_base: 40
